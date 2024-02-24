@@ -1,0 +1,9 @@
+
+Adhoc Commands are the commands that can run directly from the command line without the need for writing a playbook. 
+
+These commands are useful for tasks that you dont want to perform quickly without creating a playbook. 
+
+
+ansible -i inv mongodb -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.yum -a "name=nginx state=installed" -b
+
+ansible -i inv mongodb -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.service -a "name=nginx state=started" -b

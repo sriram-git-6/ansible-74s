@@ -1,0 +1,42 @@
+172.67.89.76
+192.67.65.89
+
+[mongodb]
+mongodb-us-dev-db-mongodb-01.devops746.online
+
+[mysql]
+roboshop-us-dev-db-mysql-01.devops746.online
+roboshop-us-dev-db-mysql-02.devops746.online
+
+[cart]
+roboshop-us-prod-app-cart-01.devops746.online
+roboshop-us-prod-app-cart-02.devops746.online
+roboshop-us-prod-app-cart-03.devops746.online
+
+[user]
+roboshop-us-prod-app-user-01.devops746.online
+roboshop-us-prod-app-user-02.devops746.online
+
+[db:children]
+mongodb
+mysql
+
+[app:children]
+cart
+user
+
+To query the inventory we use the below commands.
+
+ansible -i inv mongodb --list-hosts
+ansible -i inv cart --list-hosts
+ansible -i inv db --list-hosts
+
+ansible -i inv ungrouped --list-hosts
+
+ansible -i inv all --list-hosts
+
+
+# you can ping the server by giving username and password and by not giving username and password
+ansible -i inv mongodb -m ping
+
+ansible -i inv mongodb -m ping -u centos --ask-pass

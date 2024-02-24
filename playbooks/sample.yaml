@@ -1,0 +1,52 @@
+# single person details:
+name: sriram
+dob: 01-01-2010
+address:
+  city: hyd
+  country: india
+  d-no: 102
+  street: mg street
+
+# list of addresses
+addresses:
+  - type: permanent
+    city: hyd
+    country: india
+  - type: current
+    city: delhi
+    country: US
+
+-------------------------------------   
+- name: sriram
+  dob: 01-01-2010
+  address:
+    city: hyd
+    country: india
+    d-no: 102
+    street: mg street
+
+# list of addresses
+  addresses:
+    - type: permanent
+      city: hyd
+      country: india
+    - type: current
+      city: delhi
+      country: india
+
+- name: sri
+  dob: 01-01-2016
+  address:
+    city: hyd
+    country: india
+    d-no: 103
+    street: gokul street
+
+# list of addresses
+  addresses:
+    - type: permanent
+      city: kolkata
+      country: india
+    - type: current
+      city: hyd
+      country: india
