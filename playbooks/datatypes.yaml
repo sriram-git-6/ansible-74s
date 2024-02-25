@@ -1,5 +1,6 @@
 - name: ansible variable data types 
   hosts: localhost
+  become: yes
   vars:
     AGE: 30 #Number
     NAME: "Sriram" #String
@@ -14,18 +15,18 @@
       Docker: 4
   tasks:
     - name: print number variable
-        ansible.builtin.debug:
-          msg: "{{AGE}}"
+      ansible.builtin.debug:
+        msg: "{{AGE}}"
     - name: print String variable
-        ansible.builtin.debug:
-          msg: "{{NAME}}"
+      ansible.builtin.debug:
+        msg: "{{NAME}}"
     - name: print Boolean variable
-        ansible.builtin.debug:
-          msg: "{{isDevOps}}"
+      ansible.builtin.debug:
+        msg: "{{isDevOps}}"
     - name: print List variable
-        ansible.builtin.debug:
-          msg: "{{Skills}}"
+      ansible.builtin.debug:
+        msg: "{{Skills}}"
     - name: print Map variable
-        ansible.builtin.debug:
-          msg: "{{EXPERIENCE}}"
+      ansible.builtin.debug:
+        msg: "{{EXPERIENCE}}"
   
