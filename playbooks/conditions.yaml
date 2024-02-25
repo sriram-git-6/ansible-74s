@@ -1,6 +1,5 @@
 - name: check if the user exits or not
   hosts: localhost
-  become: yes
   tasks:
     - name: check if the user exists or not
       ansible.builtin.command: id roboshop
@@ -16,6 +15,7 @@
         msg: "{{out.rc}}"   
 
     - name: create user roboshop
+      become: yes   # we need sudo access for this task.
       ansible.builtin.user:
         name: roboshop
       when: out.rc!=0       
