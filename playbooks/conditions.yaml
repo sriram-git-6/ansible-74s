@@ -19,3 +19,6 @@
       ansible.builtin.user:
         name: roboshop
       when: out.rc!=0       
+
+# To dynamically check if a user exists on a target system and then create it if it doesn't exist
+# check if a directory exists or not and create it is not existed.  
