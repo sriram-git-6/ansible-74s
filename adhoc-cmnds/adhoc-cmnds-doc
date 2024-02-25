@@ -7,3 +7,5 @@ These commands are useful for tasks that you dont want to perform quickly withou
 ansible -i inv mongodb -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.yum -a "name=nginx state=installed" -b
 
 ansible -i inv mongodb -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.service -a "name=nginx state=started" -b
+
+yum remove nginx -y ---uninstalls nginx from the system.
