@@ -6,5 +6,5 @@
     - name: print the variable if the varible is devops
       ansible.builtin.debug:
         msg: "variable name is {{NAME}}"
-      when: NAME == "Devops"
+      when: NAME == "Devops1"
         
