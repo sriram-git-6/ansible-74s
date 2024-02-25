@@ -4,6 +4,13 @@
 [mongodb]
 mongodb-us-dev-db-mongodb-01.devops746.online
 
+[mongodb:vars]
+username: mongodb-admin
+password: "mongo-pass123"
+
+# The above defined variables will be used by all the hosts under mongodb group.
+
+
 [mysql]
 roboshop-us-dev-db-mysql-01.devops746.online
 roboshop-us-dev-db-mysql-02.devops746.online

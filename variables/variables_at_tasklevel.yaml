@@ -14,4 +14,7 @@
         land:  "2 acres"
       ansible.builtin.debug:
         msg: "override values of money and land are {{money}}, {{land}}"
+
+# ansible-playbook -e ansible_user=centos -e ansible_password=DevOps321 variables_at_tasklevel.yaml
+
              
