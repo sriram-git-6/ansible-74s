@@ -5,12 +5,13 @@
     money: "100000 Rs"
     land: "100 hectors"
   tasks:
-    name: "inherit the values from play and override the values with task variables"
-    ansible.builtin.debug:
-      msg: "money is {{money}} and land is {{land}}"
-    vars:
-      money: "750000 RS"
-      land:  "2 acres"
-    ansible.builtin.debug:
-      msg: "override values of money and land are {{money}}, {{land}}"
+    - name: "inherit the values from play"
+      ansible.builtin.debug:
+        msg: "money is {{money}} and land is {{land}}"
+    - name:  "inherit the values from play and override" 
+      vars:
+        money: "750000 RS"
+        land:  "2 acres"
+      ansible.builtin.debug:
+        msg: "override values of money and land are {{money}}, {{land}}"
              
