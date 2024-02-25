@@ -1,0 +1,21 @@
+- name: check if the user exits or not
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: check if the user exists or not
+      ansible.builtin.command: id roboshop
+      register: out    # This directive registers the result of the command into a variable named 'out'
+      ignore_errors: true # allows the playbook to continue executing even if the command fails.
+    
+    - name: print the output of the above command
+      ansible.builtin.debug:
+        msg: "output is {{out}}"  
+
+    - name: print exit status
+      ansible.builtin.debug:
+        msg: "{{out.rc}}"   
+
+    - name: create user roboshop
+      ansible.builtin.user:
+        name: roboshop
+      when: out.rc!=0       
