@@ -1,5 +1,5 @@
 - name: varibles at task level
-  hosts: local
+  hosts: localhost
   become: true
   vars:
     money: "100000 Rs"
