@@ -8,7 +8,7 @@
     
     - name: print the output of the above command
       ansible.builtin.debug:
-        msg: "output is {{out}}"  
+        msg: "output is: {{out}}"  
 
     - name: print exit status
       ansible.builtin.debug:
