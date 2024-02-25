@@ -1,0 +1,10 @@
+- name: simple condition
+  hosts: localhost
+  vars:
+    NAME: Devops
+  tasks:
+    - name: print the variable if the varible is devops
+      ansible.builtin.debug:
+        msg: "variable name is {{NAME}}"
+      when: NAME == Devops
+        
