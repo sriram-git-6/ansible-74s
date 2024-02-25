@@ -5,8 +5,9 @@
 mongodb-us-dev-db-mongodb-01.devops746.online
 
 [mongodb:vars]
-username: mongodb-admin
-password: "mongo-pass123"
+MONGO_USERNAME=mongodbadmin
+MONGO_DB=categories
+NAME=sriram-inventory
 
 # The above defined variables will be used by all the hosts under mongodb group.
 
