@@ -3,4 +3,4 @@
   tasks:
     - name: print the variables from inventory
       ansible.builtin.debug:
-        msg: "mongodb user is {{MONGO_USERNAME}}"
+        msg: "mongodb user is {{MONGO_USERNAME}}, mongodb name is {{MONGO_DB}} and db name is {{NAME}}"
