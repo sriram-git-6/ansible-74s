@@ -1,0 +1,13 @@
+- name: install the packages 
+  hosts: localhost
+  become: true
+  tasks:
+    - name: install the packages
+      ansible.builtin.yum:
+        name: "{{item.name}}"
+        state: "{{item.state}}"
+      loop:
+        - { name: nginx, state: present }
+        - { name: postfix, state: present }  
+        - { name: cyrus-sasl-plain, state: present }
+        - { name: mailx, state: present }
